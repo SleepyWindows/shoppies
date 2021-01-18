@@ -30,7 +30,7 @@ class SearchContainer extends React.Component {
     }
      
     fetchSearchResults = () =>{
-        fetch(`http://www.omdbapi.com/?apikey=7af78bf8&type=movie&s=${this.state.searchTerms}&page=1`)
+        fetch(`https://www.omdbapi.com/?apikey=7af78bf8&type=movie&s=${this.state.searchTerms}&page=1`)
         .then((res) => res.json())
         .then((data) =>{
             if(data.Response == "False"){
