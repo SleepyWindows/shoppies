@@ -10,7 +10,6 @@ class SearchContainer extends React.Component {
     }
     
     render() { 
-        console.log(process.env)
         return ( 
             <div>
                 <SearchBar 
@@ -31,7 +30,7 @@ class SearchContainer extends React.Component {
     }
      
     fetchSearchResults = () =>{
-        fetch(`http://www.omdbapi.com/?apikey=${process.env.API_KEY}&type=movie&s=${this.state.searchTerms}&page=1`)
+        fetch(`http://www.omdbapi.com/?apikey=7af78bf8&type=movie&s=${this.state.searchTerms}&page=1`)
         .then((res) => res.json())
         .then((data) =>{
             if(data.Response == "False"){
